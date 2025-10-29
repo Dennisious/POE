@@ -2,12 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
+/**
+ * QuickChatForm.java
+ * Final PoE Project — ST10500239
+ * Author: [Dennisious Moima]
+ * Description: GUI app for sending, storing, and managing chat messages.
+ */
+
 package com.mycompany.mavenproject1;
 import javax.swing.JFrame; 
-/**
- *
- * @author RC_Student_lab
- */
+
 public class LogInForm extends javax.swing.JFrame {
 
     /**

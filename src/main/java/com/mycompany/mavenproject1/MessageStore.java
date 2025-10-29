@@ -2,6 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+/**
+ * QuickChatForm.java
+ * Final PoE Project — ST10500239
+ * Author: [Dennisious Moima]
+ * Description: GUI app for sending, storing, and managing chat messages.
+ */
+// JSON reading implemented with ChatGPT guidance (OpenAI, 2025)
+
 package com.mycompany.mavenproject1;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -9,10 +17,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 import java.util.ArrayList;
-/**
- *
- * @author RC_Student_Lab
- */
+
 public class MessageStore {
     private static final String FILE_PATH = "stored_messages.json";
 

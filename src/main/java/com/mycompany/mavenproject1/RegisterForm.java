@@ -4,8 +4,10 @@
  */
 package com.mycompany.mavenproject1;
 /**
- *
- * @author RC_Student_lab
+ * QuickChatForm.java
+ * Final PoE Project — ST10500239
+ * Author: [Dennisious Moima]
+ * Description: GUI app for sending, storing, and managing chat messages.
  */
 import javax.swing.JFrame;
 

@@ -1,0 +1,46 @@
+name: Java CI - Automated Unit Tests & Reports
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      MAVEN_OPTS: "-Djava.awt.headless=true"
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: maven
+
+    - name: Build & run unit tests (headless)
+      run: mvn -B -Djava.awt.headless=true clean test surefire-report:report
+
+    - name: Upload Surefire XML reports
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: surefire-xml-reports
+        path: target/surefire-reports/
+
+    - name: Upload Surefire HTML site (human readable)
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: surefire-html-report
+        path: target/site/surefire-report.html
+
+    - name: Show quick status
+      if: always()
+      run: |
+        echo "Workflow finished. Download artifacts from the run (Artifacts section)."
